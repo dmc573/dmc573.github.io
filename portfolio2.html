@@ -134,8 +134,21 @@
     <l1><a href="index.html">Home</a></l1>
     <l1><a href="portfolio.html">Portfolio</a></l1>
     <l1><a href="aboutme.html">About Me</a></l1>
-    <br>
-    <br>
-    <center><a href="https://soundcloud.com/derrix-106459298"><img width=300 src="https://i1.sndcdn.com/avatars-000205390860-jp0ldc-t500x500.jpg"></a></center>
+    <h1><br><button id="prev" class="buttonStyle">Prev</button> Portfolio <button id="next" class="buttonStyle">Next</button></h1>
+    <script> 
+      var prevButton = document.getElementById("prev");
+      var nextButton = document.getElementById("next");
+
+      prevButton.addEventListener('click', prevPage, false);
+      nextButton.addEventListener('click', nextPage, false);
+
+      function prevPage() {
+      	window.location.href = "portfolio.html";
+      }
+      function nextPage() {
+	      window.location.href = "aboutme.html";
+      }
+    </script>
+    <h3>Quick Links<br></h3>
   </body>
 </html> 

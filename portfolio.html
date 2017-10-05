@@ -5,76 +5,124 @@
       h1
       {
         color: #AA00FF;
-        font-size: 5em;
+        font-size: 48px;
         font-family: "Helvetica", "Arial", sans-serif;
         text-align: center;
       }
       h2
       {
         color: #00AAFF;
-        font-size: 2em;
+        font-size: 32px;
         font-family: "Helvetica", "Arial", sans-serif;
         text-align: center;
       }
       h3
       {
         color:#FFAA00;
-        font-size: 40px;
+        font-size: 32px;
         font-family: "Helvetica", "Arial", sans-serif;
         text-align: center;
       }
       h4
       {
-        font-size: 40px;
+        font-size: 32px;
         font-family: "Helvetica", "Arial", sans-serif;
         font-weight: bold;
       }
       p 
       {
-        font-size: 1.2em;
+        font-size: 16px;
         font-family: "Helvetica", "Arial", sans-serif;
         margin-left: 25%;
         margin-right: 25%;
-        text-indent: 50px;
+        text-indent: 5em;
         color: white;
+        line-height: 1.5em;
       }
       p2
       {
-        font-size: 1.2em;
+        font-size: 16px;
         font-family: "Helvetica", "Arial", sans-serif;
         margin-left: 25%;
         margin-right: 25%;
         color: white;
+        line-height: 1.5em;
       }
       pre
       {
-        font-size: 1.2em;
+        font-size: 16px;
         margin-left: 25%;
         margin-right: 25%;
         color: white;
+        line-height: 1.5em;
       }
       body
       {
         background-color: #001122;
       }
-      a:link, a:visited
+     a
       {
+        color: #001122;
+        font-family: "Helvetica", "Arial", sans-serif;
         text-align: center;
-        background-color: #FFFF00;
-        color: #555500;
-        padding: 14px 25px;
+        padding: 10px 14px;
         text-decoration: none;
         display: inline-block;
+	      cursor: pointer;
       }
-      a:hover, a:active
+      l1
       {
-        background-color: #555500;
+        font-weight: bold;
+        font-size: 40px;
+        background-color: #00AAFF;
+        color: #005555;
+        text-decoration: none;
+        display: inline-block;
+        border-radius: 8px;
+      }
+      l1:hover, l1:active
+      {
+        background-color: #003355;
+        color: #00FFFF;
+      }
+      l2
+      {
+        font-weight: bold;
+        font-size: 40px;
+        background-color: #FFAA00;
+        color: #555500;
+        text-decoration: none;
+        display: inline-block;
+        border-radius: 8px;
+      }
+      l2:hover, l2:active
+      {
+        background-color: #553300;
         color: #FFFF00;
       }
       c
       {
         padding: 0px 10px;
         float: left;
+      }
+      .buttonStyle
+      {
+      	padding: 5px;
+      	border: none;
+      	background-color: #AA00FF;
+	      font-family: "Helvetica", "Arial", sans-serif;
+	      font-weight: bold;
+	      color: #001122;
+	      width: 80px;
+	      border-radius: 4px;
+	      font-size: 24px;
+      }
+      .buttonStyle:hover, .buttonStyle:active
+      {
+      	background-color: #330055;
+	      color: #001122;
+	      border: none;
+	      cursor: pointer;
       }
     </style>
     
@@ -83,12 +131,26 @@
   </head>
   <body>
     <c><img width=100 src="images/avatar.png"> </c>
-    <h4><a href="index.html">Home</a>
-    <a href="portfolio.html">Portfolio</a>
-    <a href="aboutme.html">About Me</a></h4>
-    <h1><br>Portfolio</h1>
-    <h3>Quick Links<br>
-    <a href="portfolio.html#1.1.1">1.1.1</a> <a href="portfolio.html#1.1.2">1.1.2</a> <a href="portfolio.html#1.1.3">1.1.3</a> <a href="portfolio.html#1.1.4">1.1.4</a> <a href="portfolio.html#1.1.5">1.1.5</a> <a href="portfolio.html#1.1.6">1.1.6</a> <a href="portfolio.html#1.1.7">1.1.7</a></h3>
+    <l1><a href="index.html">Home</a></l1>
+    <l1><a href="portfolio.html">Portfolio</a></l1>
+    <l1><a href="aboutme.html">About Me</a></l1>
+    <h1><br><button id="prev" class="buttonStyle">Prev</button> Portfolio <button id="next" class="buttonStyle">Next</button></h1>
+    <script> 
+      var prevButton = document.getElementById("prev");
+      var nextButton = document.getElementById("next");
+
+      prevButton.addEventListener('click', prevPage, false);
+      nextButton.addEventListener('click', nextPage, false);
+
+      function prevPage() {
+      	window.location.href = "index.html";
+      }
+      function nextPage() {
+      	window.location.href = "portfolio2.html";
+      }
+    </script>
+    <h3>Quick Links<br></h3>
+    <center><l2><a href="portfolio.html#1.1.1">1.1.1</a></l2> <l2><a href="portfolio.html#1.1.2">1.1.2</a></l2> <l2><a href="portfolio.html#1.1.3">1.1.3</a></l2> <l2><a href="portfolio.html#1.1.4">1.1.4</a></l2> <l2><a href="portfolio.html#1.1.5">1.1.5</a></l2> <l2><a href="portfolio.html#1.1.6">1.1.6</a></l2> <l2><a href="portfolio.html#1.1.7">1.1.7</a></l2></center>
     <h2 id="1.1.1"><i>1.1.1</i> Blown to Bits Reflection</h2>
     <p>Computing power has changed the way humans have done pretty much everything. A majority of people have access to computers, and they use them to do millions of different tasks. Computers store information, solve problems, and provide 
       entertainment and through the internet, computers can help us communicate and share information with others across the globe. Computers are even making jobs easier; they can store paperwork digitally, they can run simulations, and they 
@@ -148,6 +210,9 @@
     Your browser does not support the video tag.
   </video>
   </center>
-  <p>In this Scratch program, the purpose is to reach as high of an altitude as possible. Fish Coins can be gained from reaching higher altitudes, and they can be used in the shop to buy power-ups. The video illustrates gameplay, specifically playing the game, and getting enough Fish Coins to buy a power-up. The video also illustrates the movement of the sprites. For example, the penguin moves left and right but not up and down, and the platforms move up and down but not left and right. Additionally, there is gravity programmed in to reflect real-world physics. Falling from a platform causes the penguin to die, and the game then brings the player back to the main menu. Lastly, the horizontal movement is wrapped, so reaching the left side of the screen brings the penguin to the right side, and vice versa. Lastly, once the player obtains enough Fish Coins, they are able to buy an item from the shop.</p>
+  <p>In this Scratch program, the purpose is to reach as high of an altitude as possible. Fish Coins can be gained from reaching higher altitudes, and they can be used in the shop to buy power-ups. The video illustrates gameplay, 
+  specifically playing the game, and getting enough Fish Coins to buy a power-up. The video also illustrates the movement of the sprites. For example, the penguin moves left and right but not up and down, and the platforms move up 
+  and down but not left and right. Additionally, there is gravity programmed in to reflect real-world physics. Falling from a platform causes the penguin to die, and the game then brings the player back to the main menu. Lastly, the 
+  horizontal movement is wrapped, so reaching the left side of the screen brings the penguin to the right side, and vice versa. Lastly, once the player obtains enough Fish Coins, they are able to buy an item from the shop.</p>
   </body>
 </html> 
